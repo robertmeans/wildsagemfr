@@ -1,0 +1,73 @@
+button.enable-submit {
+	content: "hey there!";
+}
+button#confirm {
+	float: left;
+	margin-top: 10px;
+	max-width: 300px;
+	padding: 10px 12px;
+	// border-radius: 8px;
+	border: 1px solid #950808;
+	background: #ba2222;
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background: #d41616;
+		color: #fff;
+	}
+	&:active, &:focus {
+		outline: 0;
+		outline-style: 0;
+	}
+
+}
+button.enable-submit {
+	display: none;
+}
+button#send {
+	float: left;
+	margin-top: 10px;
+	max-width: 300px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	border: 1px solid #206311;
+	background: #2cb20c;
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background: #278111;
+		color: #fff;
+	}
+	&:active, &:focus {
+		outline: 0;
+		outline-style: 0;
+	}
+
+}
+
+.display {
+	display: none;
+}
+
+a.emailus {
+	text-decoration: none;
+	padding: 8px;
+	background-color: inherit;
+	transition: background-color .5s ease, color .5s ease;
+	&:hover {
+		text-decoration: none;
+		background-color: #757575;
+		color: #fff;
+	}
+}
+
+a.email-text {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p.right-center {
+	line-height: 1.5em;
+}
