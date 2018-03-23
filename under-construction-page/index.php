@@ -40,14 +40,8 @@
 </header>
 <section id="left-side">
 
-<h2>Tag line attention grabber slogan jingle</h2>
-  <ul>
-  <li>Add some basic information about your company here.</li>
-  <li>Services, Grand Opening date, etc.</li>
-  <li>Use this area for whatever information you want to display while your site is being built.</li>
-  <li>You don't have to use bullet points.</li>
-  <li>They do convey information quickly and concisely though.</li>
-  </ul>
+<h2>What is myofascial release?</h2>
+  <p>Myofascial release is manual soft tissue technique that involves sustained manual pressure combined with gentle stretching to tight or fascially restricted areas of the body. This highly specialized treatment technique is different from standard occupation and/or physical therapy, massage, and chiropractic therapy. May patients seek out myofascial release therapy when standard therapy has failed to completely address their pain and/or structural limitations that are contributing to their pain and/or pain patterns. Wild Sage Myofascial Release Therapy follows the myofascial release technique developed by John Barnes, a physical therapist, to address his own pain and limitations following and accident he sustained in his late teens. For more information on John Barnes and myofascial release you can go to his website www.myofascialrelease.com</p>
 
 </section>
 <section id="right-side">
