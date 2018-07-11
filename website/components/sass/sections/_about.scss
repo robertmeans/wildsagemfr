@@ -1,0 +1,124 @@
+#about {
+	padding: 0px 20px 50px 20px;
+	text-align: center; 
+	> p, h1 {
+		text-align: left;
+	}
+	img {
+		display: block;
+		margin: 0px auto 25px auto;
+		width: 90%;
+	}
+	a.about-links {
+		display: inline-block;
+		text-align: center;
+		// width: 110px;
+		margin: 30px 5px 25px;
+		color: #fff;
+		border-radius: 5px;
+		padding: 10px 15px;
+		text-decoration: none;
+		background-color: rgba(191,185,135,0.8);
+		transition: all 0.3s ease-out;
+		&:hover {
+			background-color: rgba(142,137,95,0.9);
+		} 
+	}
+	#about-col {
+		text-align: left;
+		column-count: 2;
+		h1 {
+			column-span: all;
+		}
+	}
+	.bio-head {
+		text-align: center;
+		margin-bottom: 1.5em;
+	}
+	#expectations {
+		column-count: 3;
+		> p {
+			text-align: left;
+		}
+		> h1 {
+			column-span: all;
+			text-align: left;
+		}
+	}
+	#hours {
+	> p {
+		text-align: left;
+	}
+	> h1 {
+		text-align: left;
+	}
+	}
+	#fees {
+	> p {
+		text-align: left;
+	}
+	> h1 {
+		text-align: left;
+	}
+	}
+	#resources {
+		text-align: left;
+		ol {
+			li {
+				margin-bottom: 1.5em;
+				line-height: 1.5em;
+				> a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+					&:visited {
+						color: blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 681px) {
+	#about {
+		width: 100%;
+		max-width: 1100px;
+		margin: 80px auto;
+		padding: 0px 20px 40px 20px;
+		a.about-links {
+			margin-top: 0;
+		}
+		h1.bio-head {
+			text-align: left;
+		} 
+		img {
+			width: 100%;
+			max-width: 350px;
+			float: left;
+			margin: 0px 30px 10px 0px;
+		}
+	}
+}
+@media screen and (max-width: 930px) {
+	#about {
+		#about-col {
+		column-count: 1;
+		}
+	}
+}
+@media screen and (max-width: 890px) {
+	#about {
+		#expectations {
+		column-count: 2;
+		}
+	}
+}
+@media screen and (max-width: 680px) {
+	#about {
+		#expectations {
+		column-count: 1;
+		}
+	}
+}

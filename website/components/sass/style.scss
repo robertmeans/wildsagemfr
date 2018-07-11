@@ -1,6 +1,16 @@
 @import "base-setup/eric-meyer-reset";
 @import "base-setup/clearfix";
-@import "base-setup/flexslider";
+// @import "base-setup/flexslider";
+
+@import "sections/navigation";
+@import "sections/hero";
+@import "sections/intro";
+@import "sections/services";
+@import "sections/about";
+
+@import "sections/contact";
+
+@import "sections/footer";
 
 @import "custom";
 

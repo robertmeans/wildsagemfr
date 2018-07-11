@@ -1,0 +1,42 @@
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #333;
+	background-color: #fff;
+	background: url(_images/wsmfr-footer-bkg.jpg) center center fixed;
+	margin-top: 60px;
+	p.copyright {
+		box-sizing: border-box;
+		width: 100%;
+		padding-top: 40px;
+		padding-right: 40px;
+		text-align: right;
+		color: #1e6069;
+		font-size: 0.8em;
+		line-height: 1.5em;
+		a {
+			color: inherit;
+			font-size: inherit;
+			text-decoration: none;
+			padding: 0;
+			background: inherit;
+			border: none;
+			margin: 0;
+			display: inline-block;
+			width: auto;
+			transition: color 0.3s ease;
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	footer {
+		p.copyright {
+			text-align: center;
+			padding-right: 0px;
+		}
+	}
+}

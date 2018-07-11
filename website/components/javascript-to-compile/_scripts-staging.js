@@ -241,11 +241,8 @@ $(function(){
 });
 // end - smooth scrolling for everyone!
 
-
-
-
 $(function() {
-  var topoffset = 0; //variable for scrolling effects
+  var topoffset = 110; //variable for scrolling effects
   var isTouch = 'ontouchstart' in document.documentElement;
   var wheight = $( window ).height(); //get the height of the window
 
@@ -282,62 +279,35 @@ $(function() {
   //highlight item on scroll
 
   $(window).scroll(function(){
-    var windowpos = $(window).scrollTop()+topoffset+150; 
+    var windowpos = $(window).scrollTop()+topoffset+100; 
     // added 100 so active-nav would trigger before next div had to get to
     // top:0 but yet still allow the nav to position at top:0 when
     // navigating between divs
 
 
-    $('nav li a').removeClass('active-nav');
+    $('div#large-nav ul li a').removeClass('active-nav');
 
     // if ( windowpos > $('#top-of-page').offset().top) {
     //     $('nav li a').removeClass('active-nav');
     //     $('a[href$="#top-of-page"]').addClass('active-nav');
     // }
 
-    if ( windowpos > $('#intro').offset().top) {
-        $('nav li a').removeClass('active-nav');
-        $('a[href$="#intro"]').not('.no-active-nav').addClass('active-nav');
+    if ( windowpos > $('#services').offset().top) {
+        $('div#large-nav ul li a').removeClass('active-nav');
+        $('a[href$="#services"]').not('.no-active-nav').addClass('active-nav');
     }
-    if ( windowpos > $('#instructions').offset().top) {
-        $('nav li a').removeClass('active-nav');
-        $('a[href$="#instructions"]').addClass('active-nav');
+    if ( windowpos > $('#about').offset().top) {
+        $('div#large-nav ul li a').removeClass('active-nav');
+        $('a[href$="#about"]').addClass('active-nav');
     }
     if ( windowpos > $('#contact').offset().top) {
-        $('nav li a').removeClass('active-nav');
+        $('div#large-nav ul li a').removeClass('active-nav');
         $('a[href$="#contact"]').addClass('active-nav');
     }
   });
 
 
 }); //function
-
-
-
-$(document).ready(function(){
-  $(".click").click(function(){
-    
-    var target = $(this).parent().children(".expand");
-    $(target).slideToggle();
-  });
-});
-
-$('#easy-as div a').click(function(){
-    $(this).find('i').toggleClass('fa-minus fa-plus')
-});
-
-// stop page from jumping to top when anchor is set to "#"
-// currently in use with SEO Strategies and Pricing links.
-$('a.no-default').click(function(e)
-{
-    // Special stuff to do when this link is clicked...
-
-    // Cancel the default action
-    e.preventDefault();
-});
-
-
-
 
 var btt = $('.back-to-top');
 
@@ -348,29 +318,49 @@ $('html, body').animate({
 
   e.preventDefault();
 });
-
 $(window).on('scroll', function () {
   var self = $(this),
     height = self.height(),
     top = self.scrollTop();
 
-    if(top > (.4 * height)) {
+    // if(top > (.4 * height)) {
+    if(top > (200)) {
         if (!btt.is(':visible')) {
-          btt.show();
+          btt.fadeIn(500);
         }
       } else {
-          btt.hide();
+          btt.fadeOut(500);
         }
-  }); 
+  });
 
 
-function overlay() {
-  el = document.getElementById("overlay");
-  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible"; 
+// start mobile navigation -----------------------------------------
+/* Set the width of the side navigation to 300px */
+function openNav() {
+    // document.getElementById("mySidenav").style.width = "300px";
+    var e = document.getElementById("mySidenav");
+    if (e.style.width == '300px')
+    {
+        e.style.width = '0px';
+    }
+    else 
+    {
+        e.style.width = '300px';
+    }
 }
 
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 
-// $('.join-now-btn').click(function() {
-//       $("#da-body").removeClass("modal-open");
-//       $(this).addClass('modal-open');
-// });
+// watch for window resize and modify width accordingly
+$(window).bind("resize", function () {
+    console.log($(this).width())
+    if ($(this).width() > 680) {
+        document.getElementById("mySidenav").style.width = "100%";
+    } else {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+}).trigger('resize');
+// end mobile navigation ----------------------------------------------

@@ -1,0 +1,331 @@
+
+
+// breakpoint set to 680px
+@media screen and (min-width: 681px) {
+/* get rid of large nav */
+/* replace with div */
+  nav {
+    display: none;
+  }
+  div#large-nav > ul > li > a.active-nav {
+    background-color: #4e443d;
+    background-color: rgba(78,68,61,0.9)
+  }
+  div#large-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #18484E;
+    background-color: rgba(94,81,73,0.9);
+    box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.36);
+    color: #bfb987;
+    height: 75px;
+    z-index: 9900;
+    div#contain {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      align-items: center;
+    }
+    > ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      width: 100%;
+      max-width: 1100px;
+      list-style-type: none;
+      padding-left: 0;
+      // line-height: 1em;
+      > li {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-of-type {
+          margin-left: 30px;
+        }
+        > a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 75px;
+          color: #fff;
+          background-color: #5e5149;
+          background-color: rgba(255,255,255,0);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: #4e443d;
+            background-color: rgba(78,68,61,0.9);
+            color: #fff; 
+          }
+        }
+      }
+      .fa-mobile-alt {
+        margin-right: 12px;
+      }
+      a.phone-font {
+        color: #c9c0a3;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .cindy-font {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        transition: all 0.3s ease;
+      }
+      > p {
+        margin-top: 0;
+      }
+    }
+    a.lg-nav-logo {
+      text-decoration: none;
+    }
+    a.sidenav-social-fb {
+      img.social {
+        width: 30px;
+        vertical-align: middle;
+        border: 1px solid #b4bad1;
+        border-radius: 3px;
+        margin-left: 30px;
+      }
+    }
+    img.nav-logo {
+      display: inline-block;
+      float: left;
+      margin-right: 15px;
+      width: 100%;
+      max-width: 50px;
+    }
+  }
+}
+@media only screen and ( max-width: 680px ) {
+  div#large-nav {
+    display: none;
+  }
+  .has-children ul li a {
+    padding-left: 2em;
+  } 
+  .has-children ul .has-children ul a {
+    padding-left: 2em;
+  }
+  .arrow-down::after {
+    content: "\f107";
+  }
+}
+@media only screen and ( min-width: 680px ) {
+  nav ul {
+    flex-direction: row;
+  }
+  nav ul li {
+    position: relative;
+    flex: 1 0 auto;
+    text-align: left;color: #bfb987;
+  }
+  .has-children ul, .has-children ul .has-children ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+  }
+  .has-children ul .has-children ul {
+    left: 100%;
+    top: 0;
+  }
+  nav ul li:hover ul,  .has-children ul .has-children:hover ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* ^^ concludes large navigation */
+
+@media screen and (min-width: 730px) {
+  div#large-nav > ul > li > a {
+    width: 100px;
+  }
+}
+
+/* begin mobile navigation */
+@media screen and (min-width: 681px) {
+  div.mobile-toggle img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .fa-mobile-alt {
+    color: #bfb987;
+  }
+/* The side navigation menu */
+  nav {
+    font-family: Calibri;
+    ul ul {
+      margin-left: 1em;
+    }
+    #sidenav-wrapper {
+      position: absolute;
+      top: 120px;
+      right: 0px;
+      width: 300px; // match JS width
+      padding-left: 12px;
+      padding-right: 12px;
+      box-sizing: border-box;
+    }
+  }
+  .arrow {
+    font-family: FontAwesome;
+    float: right;
+  }
+  .arrow-down::after {
+    content: "\f107";
+  }
+  .arrow-right::after {
+    content: "\f107";
+  }
+    #mobile-nav-content {
+    height: 75px;
+    z-index: 9900;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    width: 100%;
+    background-color: #5e5149;
+    padding-left: 65px;
+    span.title-font {
+      display: inline-block;
+      color: #bfb987;
+      font-size: 1.3em;
+      transition: all 0.3s ease;
+    }
+    a.phone-font {
+      display: inline-block;
+      font-size: 1em;
+      padding-left: 10px;
+      color: #bfb987;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    img.nav-logo {
+      width: 45px;
+      position: fixed;
+      top: 18px;
+      left: 12px;
+    }
+  }
+
+  
+  div.mobile-toggle {
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // height: 75px;
+    // background-color: #18484E;
+    z-index: 9901;
+    box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.36);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 85px;
+    img {
+      max-width: 50px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9998;
+      cursor: pointer;
+    }
+  }
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9890; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    //padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    a.sidenav-social-fb {
+      display: inline-block;
+      padding: 20px 8px 8px 32px;
+      margin: 0;
+    }
+    .social {
+        width: 30px;
+        transition: all .2s ease-in-out;
+        &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    font-size: 36px;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and ( max-width: 520px ) {
+  #mobile-nav-content span.title-font  {
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+   #mobile-nav-content {
+    padding-left: 60px;
+    img.nav-logo {
+      top: 18px;
+    }
+  } 
+}
+@media screen and ( max-width: 430px ) {
+  #mobile-nav-content span.title-font  {
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+  }
+  #mobile-nav-content a.phone-font {
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+  }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and ( max-height: 450px ) {
+  .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; }
+}
+
+@media screen and (max-width: 780px) {
+  div#large-nav > ul .cindy-font {
+    font-size: 1em;
+  }
+}
