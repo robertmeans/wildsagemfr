@@ -41,9 +41,9 @@
         $captcha = $_POST['g-recaptcha-response'];
     }
 
-    // $my_email = "3paws@whispertel.net";
+    $my_email = "3paws@whispertel.net";
     // for testing
-    $my_email = "robert@robertmeans.com";
+    // $my_email = "robert@robertmeans.com";
 
     // to let visitor fill in the "from" field leave string below empty 
     $from_email = "";
@@ -149,7 +149,7 @@
     $message = build_message($_REQUEST);
     $message = $message . PHP_EOL.PHP_EOL."".PHP_EOL."";
     $message = stripslashes($message);
-    $subject = "Message From Your Website Contact Form";
+    $subject = "Message From WildSageMFR.com Contact Form";
     $subject = stripslashes($subject);
 
     if ($from_email) {
