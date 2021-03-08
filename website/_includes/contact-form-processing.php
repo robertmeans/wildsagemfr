@@ -164,7 +164,7 @@
 
         $headers = "From: {$from_name} <{$_REQUEST['email']}>"."\r\n";
         /* BCC if needed */
-        $headers .= "BCC: robert@evergreenwebdesign.com\r\n";
+        // $headers .= "BCC: robert@evergreenwebdesign.com\r\n";
 
         }
 
